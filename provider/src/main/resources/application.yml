@@ -1,7 +1,10 @@
+
 server:
   port: 8081
 
 spring:
+  application:
+    name: provider
   datasource:
     url: jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
     username: sa
@@ -12,3 +15,10 @@ spring:
     console:
       enabled: true
       path: /console
+
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka
