@@ -3,7 +3,7 @@ package com.rjornelas.store.dto;
 public class ProductItemDto {
 
     private long id;
-    private int quantidade;
+    private int quantity;
 
     public long getId() {
         return id;
@@ -13,11 +13,11 @@ public class ProductItemDto {
         this.id = id;
     }
 
-    public int getQuantidade() {
-        return quantidade;
+    public int getQuantity() {
+        return quantity;
     }
 
-    public void setQuantidade(int quantidade) {
-        this.quantidade = quantidade;
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
     }
 }

@@ -1,6 +1,7 @@
 package com.rjornelas.store.dto;
 
 public class InfoProviderDto {
+
     private String adress;
 
     public String getAdress() {
