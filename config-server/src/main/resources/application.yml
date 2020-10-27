@@ -7,5 +7,5 @@ spring:
     config:
       server:
         git:
-          uri: //TODO
+          uri: https://github.com/rjornelas/spring-cloud-microservice-studies/tree/master/microservice-repo
           search-paths: provider
