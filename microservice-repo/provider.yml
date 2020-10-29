@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: jdbc:h2:mem:testdb
+    url: spring.datasource.url=jdbc:h2:tcp://localhost/~/test
     platform: h2
     username: sa
     password:
