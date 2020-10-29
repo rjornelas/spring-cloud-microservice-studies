@@ -1,6 +1,6 @@
 package com.rjornelas.provider.repository;
 
-import com.rjornelas.provider.entity.InfoProvider;
+import com.rjornelas.provider.model.InfoProvider;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

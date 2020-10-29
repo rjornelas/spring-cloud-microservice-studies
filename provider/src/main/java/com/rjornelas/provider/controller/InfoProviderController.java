@@ -1,6 +1,6 @@
 package com.rjornelas.provider.controller;
 
-import com.rjornelas.provider.entity.InfoProvider;
+import com.rjornelas.provider.model.InfoProvider;
 import com.rjornelas.provider.service.InfoProviderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;

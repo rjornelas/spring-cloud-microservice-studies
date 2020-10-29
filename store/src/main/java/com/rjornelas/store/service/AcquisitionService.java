@@ -1,30 +1,24 @@
 package com.rjornelas.store.service;
 
+import com.rjornelas.store.client.ProviderClient;
 import com.rjornelas.store.dto.AcquisitionDto;
 import com.rjornelas.store.dto.InfoProviderDto;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpMethod;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
-import org.springframework.web.client.RestTemplate;
-
-import java.util.Objects;
 
 @Service
 public class AcquisitionService {
 
     @Autowired
-    private RestTemplate client;
+    private ProviderClient providerClient;
 
     public void purchase(AcquisitionDto acquisitionDto){
 
-        ResponseEntity<InfoProviderDto> exchange =
-                client.exchange(
-                        "http://provider/info/"+acquisitionDto.getAdressDto().getState(),
-                        HttpMethod.GET,
-                        null,
-                        InfoProviderDto.class);
+        InfoProviderDto info = providerClient
+                .getInfoByState(acquisitionDto
+                        .getAdressDto()
+                        .getState());
 
-        System.out.println(exchange.getBody().getAdress());
+        System.out.println(info.getAdress());
     }
 }
