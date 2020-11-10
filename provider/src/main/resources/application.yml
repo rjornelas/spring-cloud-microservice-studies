@@ -1,10 +1,11 @@
-
-server:
-  port: 8081
-
-eureka:
-  client:
-    fetch-registry: true
-    register-with-eureka: true
-    service-url:
-      defaultZone: http://localhost:8761/eureka
+#spring.application.name: provider-application
+#spring.profiles.active: local
+#configVar: configVar-application-file
+#
+#---
+#spring.profiles: local
+#configVar: configVar-application-local
+#
+#---
+#spring.profiles: pro-1
+#configVar: configVar-application-pro-1

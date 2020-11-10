@@ -1,8 +1,23 @@
+server:
+  port: 9090
 spring:
   application:
     name: provider
   profiles:
-    active: default
+    include:
+      - pro-2
+      - pro-1
   cloud:
     config:
       uri: http://localhost:8888
+configVar: configVar-bootstrap
+
+---
+spring.profiles: pro-1
+spring.application.name: provider-pro-1
+configVar: configVar-pro-1
+
+---
+spring.profiles: pro-2
+spring.application.name: provider-pro-2
+configVar: configVar-pro-2
